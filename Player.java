@@ -28,7 +28,8 @@ public class Player {
     public void update() {
         y = y + yVelocity;
     }
-
+    
+    //player's pladdle
     public void paint(Graphics g) {
         g.setColor(Color.pink);
         g.fillRect(35, y, width, height);
