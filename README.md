@@ -4,6 +4,7 @@
 #### Pong is a table tennis sports game featuring simple two-dimensional graphics, manufactured by Atari and originally released in 1972.
 
 #### How to play?
+
     User controls the paddle by moving it vertically across the left or right side of the screen
     and then hit the ball back and forth.
     
@@ -13,3 +14,14 @@
     Use the keyboard Up(↑) and Down(↓) keys to control the paddle
     
     When a ball goes past a paddle, the other party would get 1 point
+    
+------------------------------------------------------------------------------------------------------------------------------
+CISC 3140 - Design and Implementation
+
+Professor: Katherine Chuang
+
+Student Name: Hiu Wing, Lam
+
+Emplid: 23626630
+
+Assignment 11 - Event listener on the Web (11.1 - Idea 1: Pong Game)
