@@ -24,4 +24,6 @@ Student Name: Hiu Wing, Lam
 
 Emplid: 23626630
 
-Assignment 11 - Event listener on the Web (11.1 - Idea 1: Pong Game)
+Assignment 11 - Event listener on the Web 
+
+(11.1 - Idea 1: Pong Game)
