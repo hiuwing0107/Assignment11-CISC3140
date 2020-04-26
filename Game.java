@@ -55,7 +55,8 @@ public class Game extends JPanel implements ActionListener, KeyListener {
       computer.paint(graph);
       player.paint(graph);
       ball.paint(graph);
-		
+      
+      //design the screen
       graph.setColor(Color.black);
       graph.drawLine(0, 30, PongMain.ScreenWidth, 30);
       graph.drawLine(PongMain.ScreenWidth/2, 30, PongMain.ScreenWidth/2, PongMain.ScreenHeight);
