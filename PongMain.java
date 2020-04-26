@@ -27,6 +27,7 @@ public PongMain() {
     //the constructor for window	
     setSize(ScreenWidth,ScreenHeight);
     setResizable(false);
+    //the screen title
     setTitle("Welcome to Hiu Wing's Pong Game!");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
