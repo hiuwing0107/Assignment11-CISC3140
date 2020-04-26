@@ -15,19 +15,20 @@ import java.awt.Graphics;
 
 public class Ball {
 
-	private int x = PongMain.ScreenWidth/2;
-	private int y = PongMain.ScreenHeight/2;
-	private int size = 15;
-	private int xVelocity = -2;
-	private int yVelocity = 2;
-	private int playerScore = 0;
-	private int computerScore = 0;
+     private int x = PongMain.ScreenWidth/2;
+     private int y = PongMain.ScreenHeight/2;
+     private int size = 15;
+     private int xVelocity = -2;
+     private int yVelocity = 2;
+     private int playerScore = 0;
+     private int computerScore = 0;
 	
-	public void update() {
+     public void update() {
 		
         x = x + xVelocity;
         y = y + yVelocity;
-
+        
+	//count the score
         if (x < 0) {
         	
             xVelocity = 2;
@@ -101,7 +102,8 @@ public class Ball {
     	
         return computerScore;
     }
-
+    
+    //printout player's score
     public String ScorePlayer() {
     	
         String info = "";
@@ -109,6 +111,7 @@ public class Ball {
         return info;
     }
 
+    //printout computer's score
     public String ScoreComputer() {
         String info = "";
         info = "Computer Score: " + computerScore;
