@@ -14,22 +14,23 @@ import javax.swing.JFrame;
 
 public class PongMain extends JFrame{
 
-	final static int ScreenWidth = 500;
-	final static int ScreenHeight = 400;
+   // the size of the screen
+   final static int ScreenWidth = 500;
+   final static int ScreenHeight = 400;
 	
-	public static void main(String[] args) {
+   public static void main(String[] args) {
 		
-		new PongMain();
-	}
+   new PongMain();
+}
 	
-	public PongMain() {
+public PongMain() {
+    //the constructor for window	
+    setSize(ScreenWidth,ScreenHeight);
+    setResizable(false);
+    setTitle("Welcome to Hiu Wing's Pong Game!");
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		setSize(ScreenWidth,ScreenHeight);
-		setResizable(false);
-		setTitle("Welcome to Hiu Wing's Pong Game!");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		add(new Game());
-		setVisible(true);
-	}
+    add(new Game());
+    setVisible(true);
+  }
 }
