@@ -22,107 +22,106 @@ import javax.swing.Timer;
 
 public class Game extends JPanel implements ActionListener, KeyListener {
     
-	Player player = new Player();
-	Computer computer = new Computer(this);
-	Ball ball = new Ball();
+   Player player = new Player();
+   Computer computer = new Computer(this);
+   Ball ball = new Ball();
     
-	public Game() {
+   public Game() {
 		
-		Timer time = new Timer(20, this);
-		time.start();
+     Timer time = new Timer(20, this);
+     time.start();
 		
-		this.addKeyListener(this);
-		this.setFocusable(true);
-	}
+     this.addKeyListener(this);
+     this.setFocusable(true);
+   }
 	
-	public void update() {
+   public void update() {
 		
-		player.update();
-		computer.update();
-		ball.update();
+      player.update();
+      computer.update();
+      ball.update();
 		
-		ball.checkCollisionWith(computer);
-		ball.checkCollisionWith(player);
-		ball.hitWall();
+      ball.checkCollisionWith(computer);
+      ball.checkCollisionWith(player);
+      ball.hitWall();
 		
-	}
+   }
 	
-	public void paint(Graphics graph) {
+   public void paint(Graphics graph) {
 	  
-		graph.setColor(Color.DARK_GRAY);
-		graph.fillRect(0, 0, PongMain.ScreenWidth, PongMain.ScreenHeight);
+      graph.setColor(Color.DARK_GRAY);
+      graph.fillRect(0, 0, PongMain.ScreenWidth, PongMain.ScreenHeight);
 		
-		computer.paint(graph);
-		player.paint(graph);
-		ball.paint(graph);
+      computer.paint(graph);
+      player.paint(graph);
+      ball.paint(graph);
 		
-		graph.setColor(Color.black);
-		graph.drawLine(0, 30, PongMain.ScreenWidth, 30);
-		graph.drawLine(PongMain.ScreenWidth/2, 30, PongMain.ScreenWidth/2, PongMain.ScreenHeight);
-		graph.drawOval((PongMain.ScreenWidth/2)-30, (PongMain.ScreenHeight/2)-30, 60, 60);
-        graph.setColor(Color.yellow);
+      graph.setColor(Color.black);
+      graph.drawLine(0, 30, PongMain.ScreenWidth, 30);
+      graph.drawLine(PongMain.ScreenWidth/2, 30, PongMain.ScreenWidth/2, PongMain.ScreenHeight);
+      graph.drawOval((PongMain.ScreenWidth/2)-30, (PongMain.ScreenHeight/2)-30, 60, 60);
+      graph.setColor(Color.yellow);
         
-	}
+   }
 	
-	public Ball getBall() {
+   public Ball getBall() {
 		
-		return ball;
-	}
+      return ball;
+   }
 	
-
-	public void keyPressed(KeyEvent e) {
+   //receive user's input
+   public void keyPressed(KeyEvent e) {
 		
-		if(e.getKeyCode() == KeyEvent.VK_UP) {
+       if(e.getKeyCode() == KeyEvent.VK_UP) {
 
-			player.setYVelocity(-5);
+	    player.setYVelocity(-5);
 				
-			if (player.getY() < 40) {
+	    if (player.getY() < 40) {
 			         
-		       player.setYVelocity(1);
+	       player.setYVelocity(1);
 		    
-			}
+	    }
              
-		}
-		else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
-					
-            player.setYVelocity(5);
-            
-	        if (player.getY()  + 15 > PongMain.ScreenHeight - 68.5) {
-	         
-	        	player.setYVelocity(-1);
-	        	
-	        }
-			
-		}
-		
 	}
+	else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+					
+             player.setYVelocity(5);
+            
+	     if (player.getY()  + 15 > PongMain.ScreenHeight - 68.5) {
+	         
+	        player.setYVelocity(-1);
+	        	
+	     }
+			
+	}
+		
+    }
 
 	
-	public void keyReleased(KeyEvent e) {
+    public void keyReleased(KeyEvent e) {
 		
-		if(e.getKeyCode() == KeyEvent.VK_UP) {
+	if(e.getKeyCode() == KeyEvent.VK_UP) {
 		   
-			player.setYVelocity(0);
+	     player.setYVelocity(0);
 	        
-			
-		}
-		else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
-			
-			player.setYVelocity(0);
-	        
-		}
-		
 	}
+	else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+			
+	     player.setYVelocity(0);
+	        
+	}
+		
+     }
 	
     public void keyTyped(KeyEvent e) {
 		
-	}
+    }
 
-	public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) {
 		
-		update();
-		repaint();
+         update();
+	 repaint();
 		
-	}
+    }
 
 }
