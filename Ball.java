@@ -51,6 +51,7 @@ public class Ball {
     }
 
     public void paint(Graphics graph) {
+	    
     	graph.setColor(Color.green);
     	graph.fillOval(x, y, size, size);
     	graph.drawString(ScorePlayer(), 5, 15);
@@ -58,14 +59,17 @@ public class Ball {
     }
 
     private void reverseDirection() {
+	    
         xVelocity = -xVelocity;
     }
 
     private void reverseDirectionY() {
+	    
         yVelocity = -yVelocity;
     }
 
     public void checkCollisionWith(Player player) {
+	    
         if (this.x > player.getX() && this.x < player.getX() + player.getWidth()) {
            if (this.y > player.getY() && this.y < player.getY() + player.getHeight()) {
               
@@ -75,6 +79,7 @@ public class Ball {
     }
 
     public void checkCollisionWith(Computer computer) {
+	    
         if (this.x > computer.getX() && this.x < computer.getX() + computer.getWidth()) {
            if (this.y > computer.getY() && this.y < computer.getY() + computer.getHeight()) {
               
@@ -113,12 +118,14 @@ public class Ball {
 
     //printout computer's score
     public String ScoreComputer() {
+	    
         String info = "";
         info = "Computer Score: " + computerScore;
         return info;
     }
     
     public void hitWall() {
+	    
         if (this.y < 30) {
         	
             reverseDirectionY();
