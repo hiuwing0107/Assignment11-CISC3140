@@ -15,7 +15,7 @@ import java.awt.Graphics;
 
 public class Computer {
 	
-	private int y = PongMain.ScreenHeight / 2;
+    private int y = PongMain.ScreenHeight / 2;
     private int width = 10;
     private int height = 50;
     private Game field;
